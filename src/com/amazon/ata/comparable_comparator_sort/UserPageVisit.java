@@ -66,7 +66,13 @@ public class UserPageVisit implements Comparable<UserPageVisit> {
     @Override
     public int compareTo(UserPageVisit other) {
         // PARTICIPANTS: implement compareTo method here
-        return 0;
+        int result = Long.compare(this.userId, other.userId);
+
+        if (result == 0) {
+            result = this.page.compareTo(other.page);
+        }
+
+        return result;
     }
 
     @Override

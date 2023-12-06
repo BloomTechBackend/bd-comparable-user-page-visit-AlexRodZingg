@@ -15,7 +15,8 @@ public class UserPageVisitGrouper {
      */
     public List<UserPageVisit> groupUserPageVisits(List<UserPageVisit> userPageVisits) {
         // PARTICIPANTS: add logic to implement groupUserPageVisits here
-        List<UserPageVisit> userPageVisitsCopy = new ArrayList<>();
+        List<UserPageVisit> userPageVisitsCopy = new ArrayList<>(userPageVisits);
+
 
         return userPageVisitsCopy;
     }
