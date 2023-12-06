@@ -39,7 +39,8 @@ public class UserPageVisitAggregate {
      * @return true if provided visit can be aggregated, false otherwise.
      */
     public boolean canAggregate(UserPageVisit userPageVisit) {
-        return this.baseVisit.equals(userPageVisit);
+        return this.baseVisit.getUserId() == userPageVisit.getUserId()
+                && this.baseVisit.getPage() == userPageVisit.getPage();
     }
 
     public double getTotalTimeOnPageInSeconds() {
